@@ -1,0 +1,53 @@
+Clientes, terminais e comunicações tem IDs 
+	---- String para clientes e terminais
+	---- int para comunicações
+	
+
+
+Saldo = valores dos pagamentos efetuados - dividas por pagar
+	- todos os clientes
+	- por cliente (todos os terminais)
+	- por terminal (todas as comunicações)
+	
+	
+	
+	
+CLASS DIAGRAM{
+
+	Cliente <|-- Terminal
+	Terminal <|-- Comunicações
+	
+	
+	class Cliente{
+		+ id : string
+		+ nome : string
+		+ NIF : int
+		( + terminais )
+		+ pagamentos efetuados
+		+ valores em divida
+		+ tipo
+		
+		- alterar tipo quando faz uma comunicação
+	
+	}
+	
+	class Terminal{
+	
+	}
+	
+	class Comunicações{
+	
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+Voltar a ver:
+	Existem três tipos de clientes: Normal (situação inicial, após o registo -- no entanto, ver a situação da leitura de dados textuais), Gold e Platinum.
